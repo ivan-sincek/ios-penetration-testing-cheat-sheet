@@ -603,7 +603,7 @@ Browse backups using [iExplorer](https://macroplant.com/iexplorer) (demo) for Wi
 iExplorer's default directory for storing iOS backups:
 
 ```fundamental
-C:\Users\%USERNAME%\AppData\Roaming\Apple Computer\MobileSync\Backup
+C:\Users\%USERNAME%\AppData\Roaming\Apple Computer\MobileSync\Backup\
 ```
 
 You can place your backups in either this directory or change it in settings.
