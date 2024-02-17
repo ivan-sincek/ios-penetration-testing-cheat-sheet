@@ -640,12 +640,12 @@ For `url_schemes.txt` see section [Info.plist](#infoplist), and for `urls.txt` s
 
 ---
 
-Fuzz deeplinks using [ios-url-scheme-fuzzing](https://codeshare.frida.re/@ivan-sincek/ios-url-scheme-fuzzing) script with [Frida](#6-frida):
+Fuzz deeplinks using [ios-deeplink-fuzzing](https://codeshare.frida.re/@ivan-sincek/ios-deeplink-fuzzing) script with [Frida](#6-frida):
 
 ```fundamental
-frida -U -no-pause -l ios-url-scheme-fuzzing.js -f com.someapp.dev
+frida -U -no-pause -l ios-deeplink-fuzzing.js -f com.someapp.dev
 
-frida -U -no-pause --codeshare ivan-sincek/ios-url-scheme-fuzzing -f com.someapp.dev
+frida -U -no-pause --codeshare ivan-sincek/ios-deeplink-fuzzing -f com.someapp.dev
 ```
 
 Check the source code for more instructions. You can also paste the whole source code directly into Frida and call the methods as you prefer.
