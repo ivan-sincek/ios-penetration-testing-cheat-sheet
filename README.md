@@ -116,9 +116,9 @@ On your iOS device, open Safari, go to [unc0ver.dev](https://unc0ver.dev), and p
 
 Open unc0ver, open the settings in the top-left corner, and select it as in the image below.
 
-<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/unc0ver_settings.png" alt="unc0ver Settings" height="600em"></p>
+<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/unc0ver_jailbreaking.png" alt="unc0ver Settings" height="600em"></p>
 
-<p align="center">Figure 2 - unc0ver Settings</p>
+<p align="center">Figure 2 - unc0ver Jailbreak</p>
 
 Finally, run the jailbreak.
 
