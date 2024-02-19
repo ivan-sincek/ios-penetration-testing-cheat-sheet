@@ -120,11 +120,7 @@ Open unc0ver, open the settings in the top-left corner, and select it as in the 
 
 <p align="center">Figure 2 - unc0ver Settings</p>
 
-Run the jailbreak.
-
-<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/unc0ver_jailbreaking.png" alt="unc0ver Jailbreaking" height="600em"></p>
-
-<p align="center">Figure 3 - unc0ver Jailbreaking</p>
+Finally, run the jailbreak.
 
 ---
 
@@ -252,7 +248,7 @@ On your iOS device, download the IPA, long press on it, choose "Share", and inst
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/ReProvision_Reborn_sideloading.jpg" alt="Sideloading an IPA using ReProvision Reborn" height="600em"></p>
 
-<p align="center">Figure 4 - Sideloading an IPA using ReProvision Reborn</p>
+<p align="center">Figure 3 - Sideloading an IPA using ReProvision Reborn</p>
 
 If you have an Apple developer membership, you can code sign your apps for up to 1 year; otherwise, you might have to code sign them every now and then.
 
@@ -262,7 +258,7 @@ If you don't mind sending logs to China. Install an IPA using [3uTools](https://
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/3uTools_sideloading.jpg" alt="Sideloading an IPA using 3uTools"></p>
 
-<p align="center">Figure 5 - Sideloading an IPA using 3uTools</p>
+<p align="center">Figure 4 - Sideloading an IPA using 3uTools</p>
 
 ### SSH to Your iOS Device
 
@@ -362,11 +358,11 @@ Export an IPA using [AnyTrans](https://www.imobie.com/anytrans) desktop app. Exc
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/anytrans_download.png" alt="Download an IPA using AnyTrans"></p>
 
-<p align="center">Figure 6 - Download an IPA using AnyTrans</p>
+<p align="center">Figure 5 - Download an IPA using AnyTrans</p>
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/anytrans_export.png" alt="Export an IPA using AnyTrans"></p>
 
-<p align="center">Figure 7 - Export an IPA using AnyTrans</p>
+<p align="center">Figure 6 - Export an IPA using AnyTrans</p>
 
 ## 3. Search for Files and Directories
 
@@ -522,7 +518,7 @@ To inspect the content, navigate to `Browse Data` tab, expand `Table` dropdown m
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/sqlite.png" alt="SQLite"></p>
 
-<p align="center">Figure 8 - DB Browser for SQLite</p>
+<p align="center">Figure 7 - DB Browser for SQLite</p>
 
 ---
 
@@ -610,11 +606,11 @@ You can place your backups in either this directory or change it in settings.
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/iexplorer.png" alt="iExplorer"></p>
 
-<p align="center">Figure 9 - iExplorer</p>
+<p align="center">Figure 8 - iExplorer</p>
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/iexplorer_browse.png" alt="Browse a backup using iExplorer"></p>
 
-<p align="center">Figure 10 - Browse a backup using iExplorer</p>
+<p align="center">Figure 9 - Browse a backup using iExplorer</p>
 
 ## 5. Deeplinks
 
