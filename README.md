@@ -563,7 +563,7 @@ Unpack e.g. `someapp.ipa` or [decrypted.ipa](#pull-a-decrypted-ipa) (preferred).
 Search for hardcoded sensitive data:
 
 ```bash
-echo Payload | nuclei -t ~/mobile-nuclei-templates/Keys -o nuclei_keys_results.txt
+echo Payload | nuclei -t ~/mobile-nuclei-templates/Keys/ -o nuclei_keys_results.txt
 
 cat nuclei_keys_results.txt | grep -Po '(?<=\]\ ).+' | sort -uf > nuclei_keys_results_sorted.txt
 ```
@@ -904,7 +904,7 @@ keyword="keyword"; idevicesyslog -p $(frida-ps -Uai | grep -i "${keyword}" | tr 
 [SSH](#ssh-to-your-ios-device) to your iOS device, then, download and run [Filemon](http://www.newosxbook.com):
 
 ```bash
-wget http://www.newosxbook.com/tools/filemon.tgz && tar zxvf filemon.tgz && chmod 777 filemon
+wget http://www.newosxbook.com/tools/filemon.tgz && tar zxvf filemon.tgz && chmod +x filemon
 
 ./filemon -c -f com.someapp.dev
 ```
@@ -916,7 +916,7 @@ Sensitive files such as know your customer (KYC) and similar, should not persist
 Images/screenshots path:
 
 ```fundamental
-cd /var/mobile/Containers/Data/Application/YYY...YYY/Library/SplashBoard/Snapshots
+cd /var/mobile/Containers/Data/Application/YYY...YYY/Library/SplashBoard/Snapshots/
 ```
 
 ### Dump the Pasteboard
