@@ -19,7 +19,7 @@ Websites that you should use while writing the report:
 * [owasp.org/www-project-mobile-top-10](https://owasp.org/www-project-mobile-top-10)
 * [cheatsheetseries.owasp.org](https://cheatsheetseries.owasp.org/Glossary.html)
 * [first.org/cvss/calculator/4.0](https://www.first.org/cvss/calculator/4.0)
-* [nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
+* [bugcrowd.com/vulnerability-rating-taxonomy](https://bugcrowd.com/vulnerability-rating-taxonomy)
 * [nvd.nist.gov/ncp/repository](https://nvd.nist.gov/ncp/repository)
 * [attack.mitre.org](https://attack.mitre.org)
 
