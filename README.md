@@ -31,7 +31,6 @@ My other cheat sheets:
 
 Future plans:
 
-* install Burp Proxy and ZAP certificates,
 * test widgets, push notifications, app extensions, and Firebase,
 * deeplink hijacking,
 * WebView attacks,
@@ -52,6 +51,7 @@ Future plans:
 * [SSL Kill Switch 2](#ssl-kill-switch-2)
 * [Kali Linux Tools](#kali-linux-tools)
 * [Mobile Security Framework (MobSF)](#mobile-security-framework-mobsf)
+* [Install Web Proxy Certificates](#install-web-proxy-certificates)
 
 **1. [Basics](#1-basics)**
 
@@ -114,7 +114,7 @@ Jailbreak your iOS device using [Sideloadly](https://sideloadly.io), [TrollStore
 
 Make sure you are logged in to iTunes for Sideloadly to work.
 
-Follow [cfw iOS Guide](https://ios.cfw.guide/installing-trollstore-trollstar) to install TrollStore on your mobile device.
+Follow [cfw iOS Guide](https://ios.cfw.guide/installing-trollstore-trollstar) to install TrollStore on your iOS device.
 
 Once you have sideloaded the IPA, enable the now-visible developer mode in `Settings -> Privacy & Security -> Developer Mode`.
 
@@ -246,6 +246,34 @@ Uninstall:
 docker image rm opensecurity/mobile-security-framework-mobsf
 ```
 
+## Install Web Proxy Certificates
+
+Open [Burp Suite](https://portswigger.net/burp/communitydownload), navigate to `Proxy --> Proxy Settings` and save the certificate, e.g., as `burp_suite_root_ca.der`.
+
+<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/exporting_burp_suite_proxy_certificate.png" alt="Exporting Burp Suite Proxy Certificate"></p>
+
+<p align="center">Figure 5 - Exporting Burp Suite Proxy Certificate</p>
+
+Open [ZAP](https://www.zaproxy.org), navigate to `Tools --> Options --> Network --> Server Certificates`, and save the certificate, e.g., as `zap_root_ca.cer`.
+
+<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/exporting_zap_certificate.png" alt="Exporting ZAP Certificate"></p>
+
+<p align="center">Figure 6 - Exporting ZAP Certificate</p>
+
+On your Kali Linux, start a local web server, and put the certificates in the web root directory (e.g., `somedir`):
+
+```fundamental
+mkdir somedir
+
+python3 -m http.server 9000 --directory somedir
+```
+
+On your iOS device, download the certificates with Safari.
+
+<p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/installing_cert_profile.png" alt="Installing a Certificate Profile" height="600em"></p>
+
+<p align="center">Figure 7 - Installing a Certificate Profile</p>
+
 ## 1. Basics
 
 ### Install/Uninstall an IPA
@@ -268,7 +296,7 @@ Install an IPA using [Sideloadly](https://sideloadly.io) desktop app.
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/sideloadly_sideloading.jpg" alt="Sideloading an IPA using Sideloadly"></p>
 
-<p align="center">Figure 5 - Sideloading an IPA using Sideloadly</p>
+<p align="center">Figure 8 - Sideloading an IPA using Sideloadly</p>
 
 ---
 
@@ -284,7 +312,7 @@ On your iOS device, download the IPA, long press on it, choose "Share", and inst
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/reprovision_reborn_sideloading.jpg" alt="Sideloading an IPA using ReProvision Reborn" height="600em"></p>
 
-<p align="center">Figure 6 - Sideloading an IPA using ReProvision Reborn</p>
+<p align="center">Figure 9 - Sideloading an IPA using ReProvision Reborn</p>
 
 If you have an Apple developer membership, you can code sign your apps for up to 1 year; otherwise, you will need to re-sing them every 7 days.
 
@@ -294,7 +322,7 @@ If you don't mind sending logs to China. Install an IPA using [3uTools](https://
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/3utools_sideloading.jpg" alt="Sideloading an IPA using 3uTools"></p>
 
-<p align="center">Figure 7 - Sideloading an IPA using 3uTools</p>
+<p align="center">Figure 10 - Sideloading an IPA using 3uTools</p>
 
 ### SSH to Your iOS Device
 
@@ -394,11 +422,11 @@ Export an IPA using [AnyTrans](https://www.imobie.com/anytrans) desktop app. Exc
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/anytrans_download.png" alt="Download an IPA using AnyTrans"></p>
 
-<p align="center">Figure 8 - Download an IPA using AnyTrans</p>
+<p align="center">Figure 11 - Download an IPA using AnyTrans</p>
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/anytrans_export.png" alt="Export an IPA using AnyTrans"></p>
 
-<p align="center">Figure 9 - Export an IPA using AnyTrans</p>
+<p align="center">Figure 12 - Export an IPA using AnyTrans</p>
 
 ## 3. Search for Files and Directories
 
@@ -554,7 +582,7 @@ To inspect the content, navigate to `Browse Data` tab, expand `Table` dropdown m
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/sqlite.png" alt="SQLite"></p>
 
-<p align="center">Figure 10 - DB Browser for SQLite</p>
+<p align="center">Figure 13 - DB Browser for SQLite</p>
 
 To inspect/edit database files on your iOS device, use [SQLite 3](#cydia-sources-and-tools); [SSH](#ssh-to-your-ios-device) to your iOS device and run the following commands:
 
@@ -642,11 +670,11 @@ You can place your backups in either this directory or change it in settings.
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/iexplorer.png" alt="iExplorer"></p>
 
-<p align="center">Figure 11 - iExplorer</p>
+<p align="center">Figure 14 - iExplorer</p>
 
 <p align="center"><img src="https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet/blob/main/img/iexplorer_browse.png" alt="Browse a backup using iExplorer"></p>
 
-<p align="center">Figure 12 - Browse a backup using iExplorer</p>
+<p align="center">Figure 15 - Browse a backup using iExplorer</p>
 
 ## 5. Deeplinks
 
@@ -947,7 +975,7 @@ wget http://www.newosxbook.com/tools/filemon.tgz && tar zxvf filemon.tgz && chmo
 
 Always look for created or cached files, images/screenshots, etc. Use `nano` to edit files directly on your iOS device.
 
-Sensitive files such as know your customer (KYC) and similar, should not persists in the app specific directories on the user device after the file upload. Sensitive files should not be stored in `/tmp/` directory nor similar system-wide directories.
+Sensitive files such as know your customer (KYC) and similar, should not persists in the app specific directories on user's device after the file upload. Sensitive files should not be stored in `/tmp/` directory nor similar system-wide directories.
 
 Images and screenshots path:
 
