@@ -62,6 +62,7 @@ Future plans:
 **2. [Inspect an IPA](#2-inspect-an-ipa)**
 
 * [Pull a Decrypted IPA](#pull-a-decrypted-ipa)
+* [Download and Decrypt an IPA (No Jailbreak)](#download-and-decrypt-an-ipa-no-jailbreak)
 * [Binary](#binary)
 * [Info.plist](#infoplist)
 * [AnyTrans](#anytrans)
@@ -375,6 +376,16 @@ unzip decrypted.ipa
 ```
 
 You should now see the unpacked `Payload` directory.
+
+### Download and Decrypt an IPA (No Jailbreak)
+
+If you have no jailbroken device, download the IPA from the App Store or TestFlight and decrypt it offline on an Apple Silicon Mac with [IPA-Decrypt](https://github.com/Re13orn/IPA-Decrypt):
+
+```bash
+brew install --cask re13orn/tap/ipa-decrypt
+```
+
+The original package is kept next to the decrypted one. The Mac build is ad-hoc signed, and the tool can also reuse credentials extracted from a jailbroken device over USB or SSH. [AnyTrans](#anytrans) only extracts, it does not decrypt.
 
 ### Binary
 
